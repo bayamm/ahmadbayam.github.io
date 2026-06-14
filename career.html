@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Career Exploration — Ahmad Dinie Hakimi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .role-hero {
+      background:var(--ink); color:#fff; border-radius:10px;
+      padding:2.5rem; margin-bottom:2rem; position:relative; overflow:hidden;
+    }
+    .role-hero::before {
+      content:''; position:absolute; right:-40px; top:-40px;
+      width:220px; height:220px; border-radius:50%;
+      background:rgba(18,70,240,0.25);
+    }
+    .role-hero .rh-label { font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:0.6rem; }
+    .role-hero h2 { font-family:'Syne',sans-serif; font-weight:800; font-size:2rem; letter-spacing:-0.03em; color:#fff; margin-bottom:0.5rem; }
+    .role-hero .rh-org { font-family:'DM Mono',monospace; font-size:0.78rem; color:rgba(255,255,255,0.5); }
+    .role-hero .rh-badges { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:1.25rem; }
+    .rh-badge { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.25rem 0.7rem; border-radius:100px; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.7); }
+
+    .resp-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+    .resp-card { background:var(--off); border:1px solid var(--line); border-radius:8px; padding:1.4rem; }
+    .resp-card .rc-icon { font-size:1.3rem; margin-bottom:0.6rem; }
+    .resp-card h4 { font-family:'Syne',sans-serif; font-weight:700; font-size:0.9rem; margin-bottom:0.4rem; }
+    .resp-card p { font-size:0.88rem; line-height:1.7; margin:0; }
+
+    .skills-needed { display:flex; flex-wrap:wrap; gap:0.5rem; }
+    .sn-tag {
+      font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.06em;
+      padding:0.3rem 0.75rem; border-radius:5px; background:var(--off2); color:var(--ink2);
+      border:1px solid var(--line);
+    }
+    .sn-tag.must { background:var(--accentl); color:var(--accent); border-color:rgba(18,70,240,0.2); }
+
+    .relevance-list { display:flex; flex-direction:column; gap:0.75rem; }
+    .rel-item { display:flex; gap:1rem; align-items:flex-start; padding:1rem 1.25rem; background:var(--off); border-radius:6px; border:1px solid var(--line); }
+    .rel-icon { font-size:1.1rem; flex-shrink:0; margin-top:2px; }
+    .rel-body h4 { font-family:'Syne',sans-serif; font-weight:700; font-size:0.88rem; margin-bottom:3px; }
+    .rel-body p { font-size:0.86rem; margin:0; line-height:1.65; }
+
+    .salary-box { background:var(--accentl); border:1px solid rgba(18,70,240,0.15); border-radius:8px; padding:1.5rem 2rem; display:flex; align-items:center; gap:2rem; flex-wrap:wrap; }
+    .sal-num { font-family:'Syne',sans-serif; font-weight:800; font-size:2.2rem; letter-spacing:-0.04em; color:var(--accent); }
+    .sal-lbl { font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-top:4px; }
+    .sal-divider { width:1px; height:44px; background:rgba(18,70,240,0.15); }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">DINIE<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="plan.html">Dev Plan</a></li>
+    <li><a href="evidence.html">Evidence</a></li>
+    <li><a href="reflection.html">Reflection</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile">
+  <a href="index.html">Home</a><a href="career.html">Career Exploration</a>
+  <a href="skills.html">Skills Assessment</a><a href="plan.html">Development Plan</a>
+  <a href="evidence.html">Evidence</a><a href="reflection.html">Reflection</a><a href="contact.html">Contact</a>
+</nav>
+
+<div class="page">
+<div class="wrap">
+
+  <!-- Header -->
+  <div class="eyebrow fu">Section A — Career Exploration</div>
+  <h1 class="page-title fu" data-d="0.07s">Understanding<br><span>The Field</span></h1>
+  <p class="page-lead fu" data-d="0.13s">
+    I have chosen the <strong>SOC Analyst (Security Operations Centre Analyst)</strong> as my target career role.
+    As a student of <em>Sarjana Muda Sains Komputer (Keselamatan Rangkaian Komputer)</em> at UniSZA,
+    this page explores the role's responsibilities, required skills, and its critical relevance to modern cybersecurity.
+  </p>
+
+  <!-- Role card -->
+  <div class="role-hero fu" data-d="0.18s">
+    <div class="rh-label">Chosen Career Role</div>
+    <h2>SOC Analyst</h2>
+    <div class="rh-org">Security Operations Centre · Tier 1 / Tier 2</div>
+    <div class="rh-badges">
+      <span class="rh-badge">Cybersecurity</span>
+      <span class="rh-badge">Threat Detection</span>
+      <span class="rh-badge">Incident Response</span>
+      <span class="rh-badge">Network Monitoring</span>
+      <span class="rh-badge">SIEM</span>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <!-- What is a SOC Analyst -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1rem">What Is a SOC Analyst?</h2>
+    <p style="margin-bottom:1rem">
+      A SOC Analyst is a cybersecurity professional who works within a Security Operations Centre to monitor,
+      detect, investigate, and respond to cybersecurity threats and incidents in real time.
+      They act as the frontline defenders of an organisation's digital assets, constantly watching
+      network traffic, logs, and alerts generated by security tools.
+    </p>
+    <p>
+      SOC Analysts operate in tiers — Tier 1 handles alert triage and initial investigation,
+      Tier 2 performs deeper analysis and containment, and Tier 3 handles advanced threat hunting
+      and forensics. My initial goal is to enter as a Tier 1 SOC Analyst and progress upward.
+    </p>
+  </div>
+
+  <!-- Job Responsibilities -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1.25rem">Job Responsibilities</h2>
+    <div class="resp-grid">
+      <div class="resp-card">
+        <div class="rc-icon">👁</div>
+        <h4>Continuous Monitoring</h4>
+        <p>Monitor security alerts and events 24/7 using SIEM tools like Splunk and IBM QRadar. Review dashboards for anomalies and suspicious activity.</p>
+      </div>
+      <div class="resp-card">
+        <div class="rc-icon">🔎</div>
+        <h4>Alert Triage &amp; Analysis</h4>
+        <p>Investigate security alerts to determine whether they are true positives or false positives. Prioritise incidents based on severity and potential impact.</p>
+      </div>
+      <div class="resp-card">
+        <div class="rc-icon">🚨</div>
+        <h4>Incident Response</h4>
+        <p>Follow incident response playbooks to contain, eradicate, and recover from security incidents. Document findings and escalate as needed.</p>
+      </div>
+      <div class="resp-card">
+        <div class="rc-icon">🌐</div>
+        <h4>Network Traffic Analysis</h4>
+        <p>Analyse network packets and logs using tools like Wireshark to identify malicious communication patterns, lateral movement, or data exfiltration.</p>
+      </div>
+      <div class="resp-card">
+        <div class="rc-icon">📋</div>
+        <h4>Reporting &amp; Documentation</h4>
+        <p>Produce clear incident reports for management and technical teams. Maintain logs and track recurring patterns over time.</p>
+      </div>
+      <div class="resp-card">
+        <div class="rc-icon">🛡</div>
+        <h4>Threat Intelligence</h4>
+        <p>Consume threat intelligence feeds to stay updated on new attack techniques, indicators of compromise (IOCs), and adversary behaviours.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <!-- Required Skills -->
+  <div class="section fu">
+    <h2 style="margin-bottom:0.75rem">Required Skills</h2>
+    <p style="margin-bottom:1.25rem">Skills marked in <span style="color:var(--accent);font-weight:600">blue</span> are essential (must-have). Others are beneficial.</p>
+    <div class="skills-needed">
+      <span class="sn-tag must">SIEM Tools (Splunk, QRadar)</span>
+      <span class="sn-tag must">Network Protocol Knowledge</span>
+      <span class="sn-tag must">Incident Response Procedures</span>
+      <span class="sn-tag must">Log Analysis</span>
+      <span class="sn-tag must">Wireshark / Packet Analysis</span>
+      <span class="sn-tag must">Linux Command Line</span>
+      <span class="sn-tag must">Threat Intelligence</span>
+      <span class="sn-tag must">TCP/IP &amp; OSI Model</span>
+      <span class="sn-tag">Python Scripting</span>
+      <span class="sn-tag">Firewall &amp; IDS/IPS</span>
+      <span class="sn-tag">Vulnerability Assessment</span>
+      <span class="sn-tag">Cloud Security Basics</span>
+      <span class="sn-tag">Malware Analysis (Basic)</span>
+      <span class="sn-tag">MITRE ATT&CK Framework</span>
+      <span class="sn-tag">Communication Skills</span>
+      <span class="sn-tag">Analytical Thinking</span>
+      <span class="sn-tag">Attention to Detail</span>
+      <span class="sn-tag">Teamwork &amp; Collaboration</span>
+    </div>
+  </div>
+
+  <!-- Salary & Outlook -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1rem">Market Outlook &amp; Salary</h2>
+    <div class="salary-box" style="margin-bottom:1.25rem">
+      <div><div class="sal-num">RM2,800</div><div class="sal-lbl">Entry Level / Month (MY)</div></div>
+      <div class="sal-divider"></div>
+      <div><div class="sal-num">RM3,000+</div><div class="sal-lbl">Experienced Level / Month</div></div>
+      <div class="sal-divider"></div>
+      <div><div class="sal-num">3.5M+</div><div class="sal-lbl">Global Unfilled Jobs (2025)</div></div>
+    </div>
+    <p>
+      The cybersecurity talent shortage continues to grow globally. In Malaysia, companies like 
+      <strong>Nexagate</strong> and government bodies such as NACSA and CyberSecurity Malaysia have highlighted 
+      the urgent need for trained SOC personnel as organisations accelerate digital transformation. 
+      The role offers strong job security, clear career progression, and increasingly competitive salaries.
+    </p>
+  </div>
+
+  <hr class="hr">
+
+  <!-- Relevance to Modern Cybersecurity -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1rem">Relevance to Modern Cybersecurity</h2>
+    <div class="relevance-list">
+      <div class="rel-item">
+        <div class="rel-icon">🔗</div>
+        <div class="rel-body">
+          <h4>Rising Threat Landscape</h4>
+          <p>Ransomware, phishing, and APT attacks are increasing globally. SOC Analysts are the first line of defence, essential for detecting and stopping these attacks before they cause major damage.</p>
+        </div>
+      </div>
+      <div class="rel-item">
+        <div class="rel-icon">🏛</div>
+        <div class="rel-body">
+          <h4>Regulatory Compliance</h4>
+          <p>Organisations in Malaysia must comply with PDPA, and globally with standards like ISO 27001 and PCI-DSS. SOC teams help organisations maintain compliance by monitoring and documenting security events.</p>
+        </div>
+      </div>
+      <div class="rel-item">
+        <div class="rel-icon">☁</div>
+        <div class="rel-body">
+          <h4>Cloud &amp; Hybrid Environment Security</h4>
+          <p>As companies migrate to the cloud, the attack surface expands. SOC Analysts now need cloud-native security skills to monitor AWS, Azure, and GCP environments alongside traditional infrastructure.</p>
+        </div>
+      </div>
+      <div class="rel-item">
+        <div class="rel-icon">🤖</div>
+        <div class="rel-body">
+          <h4>AI-Augmented Security Operations</h4>
+          <p>Modern SOCs leverage AI and machine learning to process millions of alerts. SOC Analysts need to work alongside these tools, validating AI-generated alerts and making critical human judgement calls.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fu" style="display:flex;gap:0.75rem;flex-wrap:wrap">
+    <a href="skills.html" class="btn btn-solid">Next: Skills Assessment →</a>
+    <a href="index.html" class="btn btn-ghost">← Home</a>
+  </div>
+
+</div>
+<footer class="footer">
+  <div class="footer-l">Ahmad Dinie Hakimi</div>
+  <div class="footer-r">Section A — Career Exploration</div>
+</footer>
+</div>
+<script src="js/global.js"></script>
+</body>
+</html>

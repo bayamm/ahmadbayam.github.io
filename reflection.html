@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Personal Reflection — Ahmad Dinie Hakimi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Company card */
+    .company-hero {
+      background:var(--ink); color:#fff; border-radius:10px;
+      padding:2.5rem; margin-bottom:2rem; display:flex; align-items:center; gap:2rem; flex-wrap:wrap;
+    }
+    .co-logo-box {
+      width:80px; height:80px; background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.15); border-radius:10px;
+      display:flex; align-items:center; justify-content:center; font-size:2.2rem; flex-shrink:0;
+    }
+    .co-info .co-label { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:0.4rem; }
+    .co-info h3 { font-family:'Syne',sans-serif; font-weight:800; font-size:1.6rem; color:#fff; margin-bottom:0.3rem; letter-spacing:-0.03em; }
+    .co-info p { font-size:0.9rem; color:rgba(255,255,255,0.55); margin:0; }
+    .co-tags { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.75rem; }
+    .co-tag { font-family:'DM Mono',monospace; font-size:0.62rem; padding:0.2rem 0.6rem; border-radius:100px; border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.55); }
+
+    /* Reflection blocks */
+    .reflection-block { border-left:3px solid var(--accent); padding:1.4rem 1.6rem; background:var(--accentl); border-radius:0 8px 8px 0; margin-bottom:1.25rem; }
+    .rb-q { font-family:'DM Mono',monospace; font-size:0.67rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:0.65rem; }
+    .rb-a { color:var(--ink2); line-height:1.85; font-size:0.97rem; }
+    .rb-a strong { color:var(--ink); }
+
+    /* Strengths / Weaknesses */
+    .sw-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
+    .sw-box { border-radius:8px; padding:1.6rem; }
+    .sw-box.str { background:var(--greenl); border:1px solid rgba(10,110,60,0.12); }
+    .sw-box.wk  { background:#fef3e2; border:1px solid rgba(180,100,20,0.12); }
+    .sw-box h3 { margin-bottom:1rem; }
+    .sw-box.str h3 { color:var(--green); }
+    .sw-box.wk h3  { color:#a0522d; }
+    .sw-list { list-style:none; display:flex; flex-direction:column; gap:0.65rem; }
+    .sw-list li { display:flex; gap:0.65rem; font-size:0.92rem; line-height:1.6; }
+    .sw-list li::before { font-size:0.9rem; flex-shrink:0; margin-top:2px; }
+    .sw-box.str .sw-list li::before { content:'✓'; color:var(--green); font-weight:700; }
+    .sw-box.wk  .sw-list li::before { content:'△'; color:#a0522d; }
+
+    /* Value cards */
+    .value-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+    .value-card { background:var(--off); border:1px solid var(--line); border-radius:8px; padding:1.3rem; }
+    .value-card .vc-icon { font-size:1.3rem; margin-bottom:0.5rem; }
+    .value-card h4 { font-family:'Syne',sans-serif; font-weight:700; font-size:0.88rem; margin-bottom:0.35rem; }
+    .value-card p { font-size:0.83rem; color:var(--ink3); line-height:1.6; margin:0; }
+
+    @media(max-width:768px){
+      .sw-grid { grid-template-columns:1fr; }
+      .company-hero { flex-direction:column; align-items:flex-start; gap:1rem; }
+    }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">BAYAM<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="plan.html">Dev Plan</a></li>
+    <li><a href="evidence.html">Evidence</a></li>
+    <li><a href="reflection.html">Reflection</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile">
+  <a href="index.html">Home</a><a href="career.html">Career Exploration</a>
+  <a href="skills.html">Skills Assessment</a><a href="plan.html">Development Plan</a>
+  <a href="evidence.html">Evidence</a><a href="reflection.html">Reflection</a><a href="contact.html">Contact</a>
+</nav>
+
+<div class="page">
+<div class="wrap">
+
+  <div class="eyebrow fu">Section E — Personal Reflection</div>
+  <h1 class="page-title fu" data-d="0.07s">My Honest <span>Reflection</span></h1>
+  <p class="page-lead fu" data-d="0.13s">
+    Reflecting on my dream company, the value I can offer, my genuine strengths and weaknesses,
+    and why I believe I am a strong candidate for a cybersecurity career.
+  </p>
+
+  <hr class="hr">
+
+  <!-- Dream Company -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1.25rem">Dream Company</h2>
+    <div class="company-hero">
+      <div class="co-logo-box">🔐</div>
+      <div class="co-info">
+        <div class="co-label">Target Organisation</div>
+        <h3>Nexagate Malaysia</h3>
+        <p>Leading Malaysian cybersecurity company specialising in managed security services, SOC operations, and enterprise threat defence</p>
+        <div class="co-tags">
+          <span class="co-tag">Private Sector</span>
+          <span class="co-tag">Managed SOC</span>
+          <span class="co-tag">Threat Intelligence</span>
+          <span class="co-tag">Kuala Lumpur, MY</span>
+          <span class="co-tag">Enterprise Security</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q&A Reflections -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1.5rem">Reflection Questions</h2>
+
+    <div class="reflection-block">
+      <div class="rb-q">Why do you want to work for this company?</div>
+      <div class="rb-a">
+        I want to work for <strong>Nexagate Malaysia</strong> because it is one of the most respected homegrown 
+        cybersecurity companies in Malaysia, with a strong focus on managed security services and SOC operations. 
+        What draws me to Nexagate specifically is that they operate a real, active SOC environment — meaning I would 
+        be working on genuine threat monitoring and incident response from day one, not just shadowing or doing 
+        administrative tasks. As a Malaysian company, Nexagate understands the local threat landscape, industry 
+        regulations such as PDPA, and the specific challenges faced by Malaysian enterprises. That local context 
+        matters to me because I want to build a career that is meaningful and relevant to my own country's 
+        digital security future. Nexagate also appears to invest in developing talent, which aligns with my 
+        ambition to grow steadily from a Tier 1 analyst toward a specialised security role.
+      </div>
+    </div>
+
+    <div class="reflection-block">
+      <div class="rb-q">What value can you bring to this company?</div>
+      <div class="rb-a">
+        I bring a <strong>solid academic foundation in networking and cybersecurity</strong> paired with genuine 
+        enthusiasm for the work itself. My hands-on experience with Wireshark, Nmap, Linux, and network 
+        protocol analysis means I can contribute meaningfully to monitoring and triage tasks without a long 
+        ramp-up period. I am a self-directed learner — I use TryHackMe, Cisco NetAcad, and online resources 
+        outside of class because the subject genuinely interests me. This means Nexagate would be investing 
+        in someone who will keep growing independently. I am also detail-oriented and methodical, which matters 
+        enormously in a SOC environment where missing a single indicator of compromise can have serious consequences. 
+        Additionally, being bilingual in Malay and English allows me to communicate findings clearly to both 
+        technical teams and non-technical stakeholders within a Malaysian business context.
+      </div>
+    </div>
+
+    <div class="reflection-block">
+      <div class="rb-q">Why should we hire you?</div>
+      <div class="rb-a">
+        You should hire me because I have chosen this career path <strong>deliberately and intentionally</strong> — 
+        not by accident. Everything I am studying, every certification I am pursuing, and every project I complete 
+        is pointed at becoming an effective SOC Analyst. I understand my current skills gap honestly and I am 
+        actively closing it. I am coachable, I take feedback well, and I approach security work with a sense of 
+        real responsibility rather than just technical curiosity. Nexagate would be getting someone who is 
+        motivated not just by salary but by a genuine desire to protect people and organisations from threats 
+        that can cause real harm. I am also at an early stage of my career, which means I bring fresh perspectives 
+        and I am fully shaped by current tools and practices — not outdated habits from a decade ago.
+      </div>
+    </div>
+
+    <div class="reflection-block">
+      <div class="rb-q">What skills make you suitable for this role?</div>
+      <div class="rb-a">
+        My core strength is my <strong>networking knowledge</strong> — TCP/IP, the OSI model, protocol behaviour, 
+        and traffic analysis — which is the foundation of effective SOC work. Threats travel over networks, 
+        and understanding how legitimate traffic looks is what makes anomalies visible. My Linux proficiency 
+        puts me at ease in the command-line environment that most SOC tools run on. My Wireshark experience 
+        gives me a head start on packet-level investigation. Beyond technical skills, I bring 
+        <strong>analytical thinking and attention to detail</strong> — qualities that matter when you are 
+        triaging dozens of alerts and must distinguish a real threat from a false positive quickly and accurately. 
+        My written communication skills also mean I can produce clear, structured incident reports that are 
+        useful to both technical and management audiences.
+      </div>
+    </div>
+
+    <div class="reflection-block">
+      <div class="rb-q">Why would a company choose to hire you over others?</div>
+      <div class="rb-a">
+        Because I combine <strong>academic grounding, self-directed learning, and honest self-awareness</strong> 
+        that many candidates at my stage lack. I do not oversell what I know — I have mapped my current skills 
+        against what a SOC Analyst actually needs and I have a clear, structured plan to close every gap. 
+        That kind of professional maturity is rare in a fresh graduate. I am also someone who finds genuine 
+        satisfaction in the detail-heavy, sometimes repetitive work of alert triage and log analysis — 
+        many people want the exciting parts of cybersecurity without being willing to do the foundational work 
+        that makes a SOC function. I am willing to do that work, do it carefully, and improve continuously. 
+        For Nexagate, hiring me means investing in someone who will still be there and growing five years from now.
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <!-- Strengths & Weaknesses -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1.25rem">Strengths &amp; Weaknesses</h2>
+    <div class="sw-grid">
+      <div class="sw-box str">
+        <h3>💪 Strengths</h3>
+        <ul class="sw-list">
+          <li>Strong networking fundamentals — TCP/IP, OSI, protocols</li>
+          <li>Highly self-motivated and self-directed learner</li>
+          <li>Attention to detail in lab work and analysis</li>
+          <li>Analytical and methodical problem-solving approach</li>
+          <li>Good written communication and report writing</li>
+          <li>Comfortable with Linux CLI environments</li>
+          <li>Bilingual — Malay &amp; English proficiency</li>
+        </ul>
+      </div>
+      <div class="sw-box wk">
+        <h3>⚠ Weaknesses (Being Honest)</h3>
+        <ul class="sw-list">
+          <li>Limited hands-on SIEM experience (Splunk, QRadar)</li>
+          <li>Cloud security knowledge is still very basic</li>
+          <li>Can overthink problems — learning to trust instinct faster</li>
+          <li>No formal work experience in security yet</li>
+          <li>Python scripting is functional but not advanced</li>
+          <li>Sometimes impatient when progress feels slow</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <!-- Value I bring -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1.25rem">What I Bring to a Team</h2>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="vc-icon">🔬</div>
+        <h4>Analytical Mindset</h4>
+        <p>I enjoy digging into problems until they are fully understood — essential for alert investigation and threat analysis.</p>
+      </div>
+      <div class="value-card">
+        <div class="vc-icon">📚</div>
+        <h4>Continuous Learning</h4>
+        <p>I actively seek knowledge outside coursework. TryHackMe, YouTube labs, and security blogs are part of my daily routine.</p>
+      </div>
+      <div class="value-card">
+        <div class="vc-icon">🤝</div>
+        <h4>Team Player</h4>
+        <p>Comfortable working in groups. I listen before I speak and contribute constructively to shared goals and tasks.</p>
+      </div>
+      <div class="value-card">
+        <div class="vc-icon">🎯</div>
+        <h4>Clear Direction</h4>
+        <p>I know exactly what I want to build toward. This focus prevents wasted effort and keeps my learning purposeful.</p>
+      </div>
+      <div class="value-card">
+        <div class="vc-icon">🌐</div>
+        <h4>Malaysian Context</h4>
+        <p>Understanding local cybersecurity challenges, regulations (PDPA), and organisational culture is a practical advantage.</p>
+      </div>
+      <div class="value-card">
+        <div class="vc-icon">📝</div>
+        <h4>Clear Reporting</h4>
+        <p>Can document and present findings clearly in English and Malay, bridging technical and non-technical audiences.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fu" style="display:flex;gap:0.75rem;flex-wrap:wrap">
+    <a href="contact.html" class="btn btn-solid">Contact Me →</a>
+    <a href="evidence.html" class="btn btn-ghost">← Evidence</a>
+  </div>
+
+</div>
+<footer class="footer">
+  <div class="footer-l">Ahmad Dinie Hakimi</div>
+  <div class="footer-r">Section E — Personal Reflection</div>
+</footer>
+</div>
+<script src="js/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Skills Assessment — Ahmad Dinie Hakimi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .skills-cols { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .skill-section-title {
+      font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.14em;
+      text-transform:uppercase; color:var(--muted); margin-bottom:1.25rem;
+      padding-bottom:0.5rem; border-bottom:1px solid var(--line);
+    }
+    .soft-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
+    .soft-item { background:var(--off); border:1px solid var(--line); border-radius:6px; padding:1rem 1.1rem; }
+    .soft-item h4 { font-family:'Syne',sans-serif; font-weight:700; font-size:0.88rem; margin-bottom:3px; }
+    .soft-item p { font-size:0.82rem; color:var(--ink3); margin:0; line-height:1.5; }
+    .soft-stars { color:var(--accent); font-size:0.7rem; margin-top:6px; letter-spacing:2px; }
+
+    /* Compare table extra */
+    .cmp-check { color:#0a6e3c; font-weight:700; }
+    .cmp-no    { color:#c0392b; }
+    .cmp-part  { color:#e67e22; }
+
+    /* Summary boxes */
+    .summary-row { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem; }
+    .sum-box { border-radius:8px; padding:1.4rem; text-align:center; }
+    .sum-box .sb-num { font-family:'Syne',sans-serif; font-weight:800; font-size:2rem; letter-spacing:-0.04em; }
+    .sum-box .sb-lbl { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:4px; }
+    .sb-green { background:var(--greenl); color:var(--green); }
+    .sb-orange { background:#fef3e2; color:#a0522d; }
+    .sb-blue { background:var(--accentl); color:var(--accent); }
+
+    @media(max-width:768px){
+      .skills-cols,.soft-grid,.summary-row { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">HAKIMI<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="plan.html">Dev Plan</a></li>
+    <li><a href="evidence.html">Evidence</a></li>
+    <li><a href="reflection.html">Reflection</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile">
+  <a href="index.html">Home</a><a href="career.html">Career Exploration</a>
+  <a href="skills.html">Skills Assessment</a><a href="plan.html">Development Plan</a>
+  <a href="evidence.html">Evidence</a><a href="reflection.html">Reflection</a><a href="contact.html">Contact</a>
+</nav>
+
+<div class="page">
+<div class="wrap">
+
+  <div class="eyebrow fu">Section B — Skills Assessment</div>
+  <h1 class="page-title fu" data-d="0.07s">Where I <span>Stand</span></h1>
+  <p class="page-lead fu" data-d="0.13s">
+    An honest evaluation of my current technical and soft skills,
+    compared against what the SOC Analyst role actually requires.
+    Based on my studies at <strong>Universiti Sultan Zainal Abidin (UniSZA)</strong>,
+    CCNA certification, and hands-on project work.
+  </p>
+
+  <hr class="hr">
+
+  <!-- Technical Skills with bars -->
+  <div class="section fu">
+    <h2 style="margin-bottom:0.5rem">Technical Skills — Current Level</h2>
+    <p style="margin-bottom:1.75rem;font-size:0.9rem">Self-assessed proficiency based on coursework, practice, and projects completed.</p>
+
+    <div class="skills-cols">
+      <!-- Networking & Security -->
+      <div class="skill-group">
+        <div class="skill-section-title">Networking &amp; Security</div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>TCP/IP &amp; OSI Model</span><span class="skill-bar-pct">85%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="85%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Network Protocol Analysis</span><span class="skill-bar-pct">78%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="78%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Wireshark</span><span class="skill-bar-pct">70%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="70%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>CCNA (Routing &amp; Switching)</span><span class="skill-bar-pct">80%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="80%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>SIEM Tools (Splunk)</span><span class="skill-bar-pct">35%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="35%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Incident Response</span><span class="skill-bar-pct">45%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="45%"></div></div>
+        </div>
+      </div>
+
+      <!-- Tools & Programming -->
+      <div class="skill-group">
+        <div class="skill-section-title">Tools &amp; Programming</div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Linux (CLI)</span><span class="skill-bar-pct">72%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="72%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Python (Basic Scripting)</span><span class="skill-bar-pct">55%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="55%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Nmap / Network Scanning</span><span class="skill-bar-pct">60%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="60%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Log Analysis (Manual)</span><span class="skill-bar-pct">55%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="55%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Vulnerability Assessment</span><span class="skill-bar-pct">50%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="50%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Cloud Security (AWS/Azure)</span><span class="skill-bar-pct">25%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="25%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <!-- Soft Skills -->
+  <div class="section fu">
+    <h2 style="margin-bottom:0.75rem">Soft Skills</h2>
+    <p style="margin-bottom:1.25rem;font-size:0.9rem">Developed through academic work, group projects, and extracurricular activities.</p>
+    <div class="soft-grid">
+      <div class="soft-item">
+        <h4>Analytical Thinking</h4>
+        <p>Comfortable breaking down complex problems. Applied during security labs and CTF challenges.</p>
+        <div class="soft-stars">★★★★☆</div>
+      </div>
+      <div class="soft-item">
+        <h4>Communication</h4>
+        <p>Can explain technical findings clearly in writing. Presented projects to lecturers and peers.</p>
+        <div class="soft-stars">★★★☆☆</div>
+      </div>
+      <div class="soft-item">
+        <h4>Teamwork &amp; Collaboration</h4>
+        <p>Worked in group projects, assigned roles, and delivered results on time as a team member.</p>
+        <div class="soft-stars">★★★★☆</div>
+      </div>
+      <div class="soft-item">
+        <h4>Attention to Detail</h4>
+        <p>Careful with configurations and log review. Noticed small errors that others missed during labs.</p>
+        <div class="soft-stars">★★★★☆</div>
+      </div>
+      <div class="soft-item">
+        <h4>Time Management</h4>
+        <p>Balances coursework, self-study, and side projects. Uses task lists to stay organised.</p>
+        <div class="soft-stars">★★★☆☆</div>
+      </div>
+      <div class="soft-item">
+        <h4>Self-Directed Learning</h4>
+        <p>Actively pursues free learning resources (TryHackMe, YouTube, LinkedIn Learning) beyond coursework.</p>
+        <div class="soft-stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <!-- Comparison table -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1rem">Skills Gap Analysis — Me vs SOC Analyst Requirements</h2>
+    <div style="overflow-x:auto">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Skill / Requirement</th>
+            <th>Industry Requirement</th>
+            <th>My Current Level</th>
+            <th>Gap</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>SIEM (Splunk / QRadar)</td><td>Proficient</td><td class="cmp-part">Beginner</td><td class="cmp-no">Major Gap — need training</td></tr>
+          <tr><td>Network Protocol Analysis</td><td>Strong</td><td class="cmp-part">Intermediate</td><td class="cmp-part">Moderate — needs more practice</td></tr>
+          <tr><td>Incident Response Process</td><td>Proficient</td><td class="cmp-part">Basic knowledge</td><td class="cmp-no">Needs practical experience</td></tr>
+          <tr><td>Log Analysis</td><td>Proficient</td><td class="cmp-part">Basic (manual)</td><td class="cmp-no">Needs tool-based training</td></tr>
+          <tr><td>Linux CLI</td><td>Proficient</td><td class="cmp-check">Intermediate</td><td class="cmp-part">Minor — keep practising</td></tr>
+          <tr><td>TCP/IP &amp; OSI Model</td><td>Strong</td><td class="cmp-check">Good</td><td class="cmp-check">Minimal gap</td></tr>
+          <tr><td>Threat Intelligence</td><td>Awareness</td><td class="cmp-part">Basic awareness</td><td class="cmp-part">Moderate</td></tr>
+          <tr><td>Cloud Security</td><td>Basic awareness</td><td class="cmp-no">Very limited</td><td class="cmp-no">Needs introduction</td></tr>
+          <tr><td>Python Scripting</td><td>Advantageous</td><td class="cmp-part">Basic</td><td class="cmp-part">Moderate</td></tr>
+          <tr><td>Communication (written/verbal)</td><td>Important</td><td class="cmp-check">Good</td><td class="cmp-check">Minimal gap</td></tr>
+          <tr><td>Teamwork &amp; Collaboration</td><td>Essential</td><td class="cmp-check">Good</td><td class="cmp-check">Minimal gap</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="summary-row">
+      <div class="sum-box sb-green"><div class="sb-num">4</div><div class="sb-lbl">Skills Ready</div></div>
+      <div class="sum-box sb-orange"><div class="sb-num">4</div><div class="sb-lbl">Moderate Gaps</div></div>
+      <div class="sum-box sb-blue"><div class="sb-num">3</div><div class="sb-lbl">Major Gaps to Close</div></div>
+    </div>
+  </div>
+
+  <div class="fu" style="display:flex;gap:0.75rem;flex-wrap:wrap">
+    <a href="plan.html" class="btn btn-solid">Next: Development Plan →</a>
+    <a href="career.html" class="btn btn-ghost">← Career Exploration</a>
+  </div>
+
+</div>
+<footer class="footer">
+  <div class="footer-l">Ahmad Dinie Hakimi</div>
+  <div class="footer-r">Section B — Skills Assessment</div>
+</footer>
+</div>
+<script src="js/global.js"></script>
+</body>
+</html>

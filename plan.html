@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Development Plan — Ahmad Dinie Hakimi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Road map timeline */
+    .roadmap { position:relative; padding-left:2rem; }
+    .roadmap::before { content:''; position:absolute; left:0; top:8px; bottom:0; width:2px; background:var(--line); }
+    .rm-item { position:relative; margin-bottom:2.25rem; }
+    .rm-item:last-child { margin-bottom:0; }
+    .rm-dot {
+      position:absolute; left:-2.47rem; top:4px;
+      width:14px; height:14px; border-radius:50%; background:var(--accent);
+      border:3px solid var(--white); box-shadow:0 0 0 2px var(--accent);
+    }
+    .rm-dot.done  { background:var(--green); box-shadow:0 0 0 2px var(--green); }
+    .rm-dot.plan  { background:var(--white); border-color:var(--accent); }
+    .rm-time { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:0.35rem; }
+    .rm-card { background:var(--off); border:1px solid var(--line); border-radius:8px; padding:1.4rem; }
+    .rm-card h4 { font-family:'Syne',sans-serif; font-weight:700; font-size:1rem; margin-bottom:0.5rem; }
+    .rm-card p { font-size:0.9rem; color:var(--ink3); margin-bottom:0.75rem; }
+    .rm-tags { display:flex; flex-wrap:wrap; gap:0.4rem; }
+    .rm-tag { font-family:'DM Mono',monospace; font-size:0.62rem; padding:0.2rem 0.55rem; border-radius:4px; background:var(--accentl); color:var(--accent); }
+    .rm-tag.done { background:var(--greenl); color:var(--green); }
+    .rm-tag.gray { background:var(--off2); color:var(--muted); }
+
+    /* Cert grid */
+    .cert-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+    .cert-card {
+      border:1px solid var(--line); border-radius:8px; padding:1.4rem;
+      display:flex; flex-direction:column; gap:0.5rem; transition:border-color 0.2s, box-shadow 0.2s;
+    }
+    .cert-card:hover { border-color:var(--accent); box-shadow:0 2px 14px rgba(18,70,240,0.08); }
+    .cert-icon { font-size:1.5rem; }
+    .cert-name { font-family:'Syne',sans-serif; font-weight:700; font-size:0.92rem; }
+    .cert-by { font-family:'DM Mono',monospace; font-size:0.66rem; color:var(--muted); }
+    .cert-when { font-family:'DM Mono',monospace; font-size:0.65rem; color:var(--accent); margin-top:auto; padding-top:0.5rem; border-top:1px solid var(--line); }
+
+    /* Tools used */
+    .tools-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:0.75rem; }
+    .tool-pill {
+      display:flex; align-items:center; gap:0.6rem;
+      padding:0.75rem 1rem; background:var(--off); border:1px solid var(--line); border-radius:6px;
+      font-family:'DM Mono',monospace; font-size:0.72rem; color:var(--ink2);
+    }
+    .tool-pill .tp-icon { font-size:1rem; }
+    .tool-pill .tp-lvl { margin-left:auto; font-size:0.6rem; color:var(--muted); }
+
+    /* Goals boxes */
+    .goals-cols { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+    .goal-box { border-radius:8px; padding:1.75rem; }
+    .goal-box.short { background:var(--accentl); border:1px solid rgba(18,70,240,0.12); }
+    .goal-box.long  { background:var(--ink); color:#fff; }
+    .goal-box h3 { margin-bottom:1rem; }
+    .goal-box.long h3 { color:#fff; }
+    .goal-box ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
+    .goal-box ul li { display:flex; gap:0.6rem; font-size:0.92rem; align-items:flex-start; }
+    .goal-box ul li::before { content:'→'; font-family:'DM Mono',monospace; color:var(--accent); font-size:0.8rem; flex-shrink:0; margin-top:3px; }
+    .goal-box.long ul li { color:rgba(255,255,255,0.75); }
+    .goal-box.long ul li::before { color:var(--accent); }
+    .goal-box .goal-yr { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:0.5rem; }
+    .goal-box.long .goal-yr { color:rgba(255,255,255,0.35); }
+
+    @media(max-width:768px) {
+      .goals-cols { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">AHMAD<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="plan.html">Dev Plan</a></li>
+    <li><a href="evidence.html">Evidence</a></li>
+    <li><a href="reflection.html">Reflection</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile">
+  <a href="index.html">Home</a><a href="career.html">Career Exploration</a>
+  <a href="skills.html">Skills Assessment</a><a href="plan.html">Development Plan</a>
+  <a href="evidence.html">Evidence</a><a href="reflection.html">Reflection</a><a href="contact.html">Contact</a>
+</nav>
+
+<div class="page">
+<div class="wrap">
+
+  <div class="eyebrow fu">Section C — Career Development Plan</div>
+  <h1 class="page-title fu" data-d="0.07s">My Roadmap <span>Forward</span></h1>
+  <p class="page-lead fu" data-d="0.13s">
+    A structured, realistic plan covering certifications, tools to master,
+    and clear short-term and long-term career milestones toward becoming a SOC Analyst.
+  </p>
+
+  <hr class="hr">
+
+  <!-- Timeline roadmap -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1.75rem">Development Timeline</h2>
+    <div class="roadmap">
+
+      <div class="rm-item">
+        <div class="rm-dot done"></div>
+        <div class="rm-time">✓ Completed — 2022–2025</div>
+        <div class="rm-card">
+          <h4>Foundation &amp; Certification Phase</h4>
+          <p>Built core networking and security knowledge through UniSZA coursework. Earned CCNA certification,
+          completed the Smart Network Bootcamp, achieved Dean's List, and built a Final Year Project on
+          Financial Transaction Anomaly Detection using ML and Raspberry Pi.</p>
+          <div class="rm-tags">
+            <span class="rm-tag done">CCNA: Switching, Routing &amp; Wireless</span>
+            <span class="rm-tag done">Cisco Packet Tracer Labs</span>
+            <span class="rm-tag done">NS3 / MANET Simulation</span>
+            <span class="rm-tag done">Smart Network Bootcamp</span>
+            <span class="rm-tag done">Dean's List — Sem I 2024/2025</span>
+            <span class="rm-tag done">FYP — Anomaly Detection (ML + RPi)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rm-item">
+        <div class="rm-dot"></div>
+        <div class="rm-time">In Progress — 2025 (Now)</div>
+        <div class="rm-card" style="border-color:var(--accent);border-left:3px solid var(--accent)">
+          <h4>Skill-Building &amp; Certification Phase</h4>
+          <p>Actively studying for CompTIA Security+. Practising on TryHackMe SOC Level 1 path. Building a home lab using VirtualBox with Kali Linux and Security Onion.</p>
+          <div class="rm-tags">
+            <span class="rm-tag">CompTIA Security+ (Study)</span>
+            <span class="rm-tag">TryHackMe SOC Path</span>
+            <span class="rm-tag">Splunk Fundamentals</span>
+            <span class="rm-tag">Home Lab Setup</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rm-item">
+        <div class="rm-dot plan"></div>
+        <div class="rm-time">Short-Term — Mid 2025 to 2026</div>
+        <div class="rm-card">
+          <h4>Entry-Level SOC Role</h4>
+          <p>Obtain CompTIA Security+ certification, complete internship, and land first Tier 1 SOC Analyst position. Begin studying for CCNA to strengthen networking depth.</p>
+          <div class="rm-tags">
+            <span class="rm-tag gray">Security+ Certified</span>
+            <span class="rm-tag gray">Internship Completed</span>
+            <span class="rm-tag gray">Tier 1 SOC Analyst Job</span>
+            <span class="rm-tag gray">CCNA (Start)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rm-item">
+        <div class="rm-dot plan"></div>
+        <div class="rm-time">Long-Term — 2027 and Beyond</div>
+        <div class="rm-card">
+          <h4>Senior / Specialist SOC Role</h4>
+          <p>Progress to Tier 2/3 SOC Analyst. Earn advanced certifications. Specialise in threat hunting or cloud security. Aim for SOC Team Lead or Security Engineer role by year 5.</p>
+          <div class="rm-tags">
+            <span class="rm-tag gray">CySA+ / CEH</span>
+            <span class="rm-tag gray">CCNA Certified</span>
+            <span class="rm-tag gray">Cloud Security (AWS)</span>
+            <span class="rm-tag gray">Tier 2–3 SOC / Threat Hunting</span>
+            <span class="rm-tag gray">SOC Lead (5 yrs)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <!-- Certifications -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1.25rem">Target Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🛡</div>
+        <div class="cert-name">CompTIA Security+</div>
+        <div class="cert-by">CompTIA</div>
+        <p style="font-size:0.82rem;margin-top:0.3rem">Industry baseline certification for cybersecurity roles. Validates core security concepts and practices.</p>
+        <div class="cert-when">Target: Mid 2025 · Priority: High</div>
+      </div>
+      <div class="cert-card" style="border-color:rgba(10,110,60,0.3);background:var(--greenl)">
+        <div class="cert-icon">🌐</div>
+        <div class="cert-name">CCNA: Switching, Routing &amp; Wireless</div>
+        <div class="cert-by">Cisco Networking Academy · UniSZA</div>
+        <p style="font-size:0.82rem;margin-top:0.3rem">Covers VLANs, STP, inter-VLAN routing, wireless LAN essentials, EtherChannel, and DHCP. Already earned through UniSZA.</p>
+        <div class="cert-when" style="color:var(--green)">✓ Earned · 02 Dec 2025</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🔍</div>
+        <div class="cert-name">CySA+ (Cybersecurity Analyst)</div>
+        <div class="cert-by">CompTIA</div>
+        <p style="font-size:0.82rem;margin-top:0.3rem">Focuses specifically on threat detection, SIEM, and incident response — directly relevant to SOC work.</p>
+        <div class="cert-when">Target: 2026–2027 · Priority: Medium</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">💻</div>
+        <div class="cert-name">Splunk Core Certified User</div>
+        <div class="cert-by">Splunk</div>
+        <p style="font-size:0.82rem;margin-top:0.3rem">Validates practical skill in Splunk — the most widely deployed SIEM tool in enterprise SOC environments.</p>
+        <div class="cert-when">Target: Late 2025 · Priority: Medium</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">☁</div>
+        <div class="cert-name">AWS Security Specialty</div>
+        <div class="cert-by">Amazon Web Services</div>
+        <p style="font-size:0.82rem;margin-top:0.3rem">Cloud security expertise is increasingly required as organisations migrate workloads to cloud platforms.</p>
+        <div class="cert-when">Target: 2027+ · Priority: Low (Future)</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⚔</div>
+        <div class="cert-name">CEH (Ethical Hacker)</div>
+        <div class="cert-by">EC-Council</div>
+        <p style="font-size:0.82rem;margin-top:0.3rem">Understanding attacker techniques helps a SOC Analyst think offensively to better defend infrastructure.</p>
+        <div class="cert-when">Target: 2027+ · Priority: Low (Future)</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <!-- Tools -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1.25rem">Tools I'm Learning &amp; Using</h2>
+    <div class="tools-grid">
+      <div class="tool-pill"><span class="tp-icon">🔬</span>Wireshark<span class="tp-lvl">Intermediate</span></div>
+      <div class="tool-pill"><span class="tp-icon">🐧</span>Kali Linux<span class="tp-lvl">Intermediate</span></div>
+      <div class="tool-pill"><span class="tp-icon">📊</span>Splunk<span class="tp-lvl">Beginner</span></div>
+      <div class="tool-pill"><span class="tp-icon">🗺</span>Nmap<span class="tp-lvl">Intermediate</span></div>
+      <div class="tool-pill"><span class="tp-icon">🐍</span>Python<span class="tp-lvl">Intermediate</span></div>
+      <div class="tool-pill"><span class="tp-icon">📡</span>Cisco Packet Tracer<span class="tp-lvl">Proficient</span></div>
+      <div class="tool-pill"><span class="tp-icon">🌐</span>NS3 Simulator<span class="tp-lvl">Intermediate</span></div>
+      <div class="tool-pill"><span class="tp-icon">🖥</span>Raspberry Pi<span class="tp-lvl">Intermediate</span></div>
+      <div class="tool-pill"><span class="tp-icon">🔒</span>Metasploit<span class="tp-lvl">Beginner</span></div>
+      <div class="tool-pill"><span class="tp-icon">🌐</span>VirtualBox<span class="tp-lvl">Good</span></div>
+      <div class="tool-pill"><span class="tp-icon">🛡</span>Security Onion<span class="tp-lvl">Beginner</span></div>
+      <div class="tool-pill"><span class="tp-icon">🔧</span>Bash / Shell<span class="tp-lvl">Intermediate</span></div>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <!-- Goals -->
+  <div class="section fu">
+    <h2 style="margin-bottom:1.25rem">Short &amp; Long-Term Goals</h2>
+    <div class="goals-cols">
+      <div class="goal-box short">
+        <div class="goal-yr">2 Years — 2025 to 2027</div>
+        <h3>Short-Term Goals</h3>
+        <ul>
+          <li>Earn CompTIA Security+ certification</li>
+          <li>Complete degree at Universiti Sultan Zainal Abidin (UniSZA) in IT / Cybersecurity</li>
+          <li>Secure internship at a cybersecurity firm or SOC</li>
+          <li>Obtain first full-time Tier 1 SOC Analyst position</li>
+          <li>Complete CCNA study and certification</li>
+          <li>Build a functional home lab for continuous practice</li>
+          <li>Finish TryHackMe SOC Level 1 &amp; 2 paths</li>
+        </ul>
+      </div>
+      <div class="goal-box long">
+        <div class="goal-yr">5 Years — 2027 to 2030</div>
+        <h3>Long-Term Goals</h3>
+        <ul>
+          <li>Progress to Tier 2 / Tier 3 SOC Analyst</li>
+          <li>Earn CySA+ and cloud security certifications</li>
+          <li>Specialise in threat hunting or digital forensics</li>
+          <li>Work with MITRE ATT&amp;CK framework at an advanced level</li>
+          <li>Contribute to open-source security tooling</li>
+          <li>Aim for SOC Team Lead or Security Engineer title</li>
+          <li>Mentor junior analysts as a senior team member</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="fu" style="display:flex;gap:0.75rem;flex-wrap:wrap">
+    <a href="evidence.html" class="btn btn-solid">Next: Evidence of Learning →</a>
+    <a href="skills.html" class="btn btn-ghost">← Skills Assessment</a>
+  </div>
+
+</div>
+<footer class="footer">
+  <div class="footer-l">Ahmad Dinie Hakimi</div>
+  <div class="footer-r">Section C — Career Development Plan</div>
+</footer>
+</div>
+<script src="js/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Ahmad Dinie Hakimi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-grid { display:grid; grid-template-columns:1fr 1.35fr; gap:3.5rem; align-items:start; }
+    .contact-links { display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem; }
+    .c-link {
+      display:flex; align-items:center; gap:0.9rem;
+      padding:0.9rem 1.1rem; background:var(--off); border:1px solid var(--line);
+      border-radius:8px; color:var(--ink2); font-size:0.9rem;
+      transition:border-color 0.2s, background 0.2s;
+    }
+    .c-link:hover { border-color:var(--accent); background:var(--accentl); }
+    .c-icon { width:34px; height:34px; background:var(--white); border:1px solid var(--line); border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
+    .c-label { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:1px; }
+    .c-val { font-size:0.88rem; color:var(--ink); font-weight:500; }
+
+    .form-group { display:flex; flex-direction:column; gap:0.35rem; margin-bottom:1rem; }
+    .form-label { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); }
+    .form-input, .form-textarea {
+      width:100%; padding:0.75rem 1rem;
+      background:var(--off); border:1.5px solid var(--line); border-radius:6px;
+      font-family:'Inter',sans-serif; font-size:0.95rem; color:var(--ink);
+      outline:none; transition:border-color 0.2s;
+    }
+    .form-input:focus, .form-textarea:focus { border-color:var(--accent); background:var(--white); }
+    .form-textarea { resize:vertical; min-height:130px; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .form-submit {
+      width:100%; padding:0.85rem; background:var(--accent); color:#fff;
+      border:none; border-radius:6px; font-family:'DM Mono',monospace;
+      font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase;
+      cursor:pointer; transition:background 0.2s; margin-top:0.5rem;
+    }
+    .form-submit:hover { background:#0a35cc; }
+    .form-success { display:none; text-align:center; padding:1.5rem; background:var(--greenl); border:1px solid rgba(10,110,60,0.15); border-radius:8px; }
+    .form-success .fs-icon { font-size:2rem; margin-bottom:0.5rem; }
+    .form-success h4 { font-family:'Syne',sans-serif; font-weight:700; color:var(--green); margin-bottom:0.3rem; }
+    .form-success p { font-size:0.88rem; color:var(--green); margin:0; }
+
+    .avail-box { background:var(--accentl); border:1px solid rgba(18,70,240,0.12); border-radius:8px; padding:1.25rem 1.5rem; margin-top:1.75rem; }
+    .avail-box h4 { font-family:'Syne',sans-serif; font-weight:700; font-size:0.9rem; margin-bottom:0.4rem; }
+    .avail-box p { font-size:0.85rem; color:var(--ink3); margin:0; line-height:1.65; }
+
+    @media(max-width:768px){
+      .contact-grid { grid-template-columns:1fr; }
+      .form-row { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Dinie<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="plan.html">Dev Plan</a></li>
+    <li><a href="evidence.html">Evidence</a></li>
+    <li><a href="reflection.html">Reflection</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile">
+  <a href="index.html">Home</a><a href="career.html">Career Exploration</a>
+  <a href="skills.html">Skills Assessment</a><a href="plan.html">Development Plan</a>
+  <a href="evidence.html">Evidence</a><a href="reflection.html">Reflection</a><a href="contact.html">Contact</a>
+</nav>
+
+<div class="page">
+<div class="wrap">
+
+  <div class="eyebrow fu">Get In Touch</div>
+  <h1 class="page-title fu" data-d="0.07s">Contact <span>Me</span></h1>
+  <p class="page-lead fu" data-d="0.13s">
+    Open to internship opportunities, collaborations, and conversations about cybersecurity and networking.
+  </p>
+
+  <hr class="hr">
+
+  <div class="contact-grid">
+    <!-- Left -->
+    <div class="fu">
+      <h3 style="margin-bottom:0.5rem">Ahmad Dinie Hakimi</h3>
+      <p style="font-size:0.92rem;margin-bottom:0">Cybersecurity &amp; Networking Student · Universiti Sultan Zainal Abidin (UniSZA)</p>
+      <div class="contact-links">
+        <a href="mailto:dinieehkm@gmail.com" class="c-link">
+          <div class="c-icon">✉</div>
+          <div><span class="c-label">Email</span><span class="c-val">dinieehkm@gmail.com</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/ahmad-dinie-hanafiah" target="_blank" class="c-link">
+          <div class="c-icon">💼</div>
+          <div><span class="c-label">LinkedIn</span><span class="c-val">Ahmad Dinie Hanafiah</span></div>
+        </a>
+        <div class="c-link">
+          <div class="c-icon">🎓</div>
+          <div><span class="c-label">University</span><span class="c-val">Universiti Sultan Zainal Abidin (UniSZA)</span></div>
+        </div>
+        <div class="c-link">
+          <div class="c-icon">📍</div>
+          <div><span class="c-label">Location</span><span class="c-val">Malaysia</span></div>
+        </div>
+      </div>
+
+      <div class="avail-box">
+        <h4>🎯 Currently Looking For</h4>
+        <p>Internship position in a SOC environment, network security team, or IT security department. Available from mid-2025. Willing to learn, contribute, and grow as part of a real cybersecurity team.</p>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="fu" data-d="0.12s">
+      <h3 style="margin-bottom:1.25rem">Send a Message</h3>
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-input" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <input type="text" class="form-input" placeholder="Internship opportunity / Collaboration / Other">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Tell me about the opportunity or what you have in mind..."></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submit-btn">Send Message</button>
+      </form>
+      <div class="form-success" id="form-success">
+        <div class="fs-icon">✅</div>
+        <h4>Message Sent!</h4>
+        <p>Thank you for reaching out. I will get back to you as soon as possible.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <!-- Portfolio summary -->
+  <div class="fu">
+    <h2 style="margin-bottom:1.25rem">Portfolio Summary</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem">
+      <a href="career.html" class="card" style="text-decoration:none;display:block">
+        <div style="font-size:1.2rem;margin-bottom:0.4rem">🔍</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;margin-bottom:3px">Career Exploration</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted)">SOC Analyst role breakdown</div>
+      </a>
+      <a href="skills.html" class="card" style="text-decoration:none;display:block">
+        <div style="font-size:1.2rem;margin-bottom:0.4rem">📊</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;margin-bottom:3px">Skills Assessment</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted)">Honest gap analysis</div>
+      </a>
+      <a href="plan.html" class="card" style="text-decoration:none;display:block">
+        <div style="font-size:1.2rem;margin-bottom:0.4rem">🗺</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;margin-bottom:3px">Dev Plan</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted)">Certs, tools &amp; goals</div>
+      </a>
+      <a href="evidence.html" class="card" style="text-decoration:none;display:block">
+        <div style="font-size:1.2rem;margin-bottom:0.4rem">📁</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;margin-bottom:3px">Evidence</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted)">Courses &amp; projects</div>
+      </a>
+      <a href="reflection.html" class="card" style="text-decoration:none;display:block">
+        <div style="font-size:1.2rem;margin-bottom:0.4rem">💬</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;margin-bottom:3px">Reflection</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted)">Personal insights</div>
+      </a>
+    </div>
+  </div>
+
+</div>
+<footer class="footer">
+  <div class="footer-l">Ahmad Dinie Hakimi</div>
+  <div class="footer-r">2026</div>
+</footer>
+</div>
+<script src="js/global.js"></script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      this.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }, 1200);
+  });
+</script>
+</body>
+</html>
